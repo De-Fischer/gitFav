@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Poppins', sans-serif;
+  --text-color: #E1E1E6;
+
+  --hue: 194;
+  --primary-color: #092D38;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: black;
+}
+
+/*tudo dentro do body*/
+body * {
+  font-family: var(--ff-primary);
+}
+
+/* classe padrão para esconder elemento sem afetar o leitor de tela*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  max-width: 1142px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2.5rem 0;
+}
+
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  background-color: #06181C;
+  color: #FFF;
+  height: 4.8rem;
+  border: 1px solid;
+  border-radius: .5rem;
+  padding: 1.6rem;
+  width: 100vh;
+  font-size: 1.6rem;
+  margin-right: .8rem;
+}
+
+.search button {
+  background-color: #065E7C;
+  border-radius: .5rem;
+  height: 4.8rem;
+  border: none;
+  padding: 1.2rem 3.2rem;
+  text-transform: uppercase;
+  color: #FFF;
+  display: flex;
+  align-items:center;
+  gap: .8rem;
+  font-size: 1.4rem;
+
+  cursor: pointer;
+}
+
+.search button:hover {
+  filter: brightness(1.1); /*clareia a cor*/
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /*junta todo background*/ 
+}
+
+table * {
+  font-size: 2rem;
+  color: var(--text-color);
+  border-color: #065E7C;
+}
+
+table th {
+  background: var(--primary-color);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+/*aplica somente no primeiro th*/
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+/*todas linha pares da tabela*/
+table tr:nth-child(even) {
+  background: #092D38;
+}
+
+/*todas linha impares da tabela*/
+table tr:nth-child(odd) {
+  background: #06181C;
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+
+  color: #F75A68;
+
+  cursor: pointer;
+}
+
+td .remove:hover {
+  color: red;
+}
+
+.none {
+  background-color: #06181C;
+  padding: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  gap: 6rem;
+}
+
+.none span {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 2.5rem;
+  color: #4E5455;;
+}
+
+.hide {
+  display: none;
+}
